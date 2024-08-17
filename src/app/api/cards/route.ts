@@ -1,29 +1,22 @@
-import { NextRequest, NextResponse } from "next/server";
+import handleAPICall, { APIHandler } from "@/app/lib/utils";
 
-export const GET = async (
-  req: NextRequest,
-  res: NextResponse
-) => {
-  return Response.json({error: 'not implemented'}, {status: 500});
+const GetHandler: APIHandler = async (req, res) => {
+  return Response.json({error: 'Not implemented!'}, {status: 500});
 }
 
-export const POST = async (
-  req: NextRequest,
-  res: NextResponse
-) => { 
-  return Response.json({error: 'not implemented'}, {status: 500});
+const PostHandler: APIHandler = async (req, res) => {
+  return Response.json({error: 'Not implemented!'}, {status: 500});
 }
 
-export const DELETE = async (
-  req: NextRequest,
-  res: NextResponse
-) => {
-  return Response.json({error: 'not implemented'}, {status: 500});
+const DeleteHandler: APIHandler = async (req, res) => {
+  return Response.json({error: 'Not implemented!'}, {status: 500});
 }
 
-export const PATCH = async (
-  req: NextRequest,
-  res: NextResponse
-) => {
-  return Response.json({error: 'not implemented'}, {status: 500});
+const PatchHandler: APIHandler = async (req, res) => {
+  return Response.json({error: 'Not implemented!'}, {status: 500});
 }
+
+export const GET = handleAPICall(GetHandler);
+export const POST = handleAPICall(PostHandler);
+export const PATCH = handleAPICall(PatchHandler);
+export const DELETE = handleAPICall(DeleteHandler);
