@@ -28,3 +28,31 @@ content-type: application/json
     "firstname": "Jerimiah",
     "lastname": "From Amongus"
 }
+
+##############################################################################
+
+GET http://127.0.0.1:3000/api/cards HTTP/1.1
+
+###
+
+POST http://127.0.0.1:3000/api/cards HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Magic Card #2",
+    "description": "features a swirling vortex of mystical energy with a faint creature's silhouette, glowing runes, and intricate borders, radiating an aura of mystery and power.",
+    "count": 1,
+    "owner_id": 100
+}
+
+###
+DELETE http://127.0.0.1:3000/api/cards HTTP/1.1
+content-type: application/json
+
+{}
+
+###
+PATCH  http://127.0.0.1:3000/api/cards HTTP/1.1
+content-type: application/json
+
+{}
