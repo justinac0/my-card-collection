@@ -12,7 +12,7 @@ export default function handleAPICall(
         try {
             return await handler(req, res);
         } catch (error: any) {
-            return Response.json({error: error.toString()}, {status: 500});
+            return Response.json({error: error}, {status: 500});
         }
     }
 }
